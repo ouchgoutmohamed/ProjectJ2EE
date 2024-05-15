@@ -15,13 +15,13 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
-        String username = req.getParameter("username").trim();
+        String email = req.getParameter("email").trim();
         String password = Encryptor.encryptPassword(req.getParameter("password").trim());
 
-        if(Login.authenticate(username, password))
+        if(Login.authenticate(email, password))
         {
             HttpSession session = req.getSession();
-            session.setAttribute("username", username);
+            session.setAttribute("email", email);
             res.sendRedirect("dashboard.jsp");
         } else {
             res.sendRedirect("login.jsp");

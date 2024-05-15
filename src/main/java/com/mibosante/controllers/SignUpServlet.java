@@ -16,13 +16,13 @@ public class SignUpServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
         String name = req.getParameter("name").trim();
-        String username = req.getParameter("username").trim();
+        String email = req.getParameter("email").trim();
         String password = Encryptor.encryptPassword(req.getParameter("password").trim());
 
-        if(SignUp.signup(name, username, password))
+        if(SignUp.signup(name, email, password))
         {
             HttpSession session = req.getSession();
-            session.setAttribute("username", username);
+            session.setAttribute("email", email);
             res.sendRedirect("login.jsp");
         } else {
             res.sendRedirect("login.jsp");

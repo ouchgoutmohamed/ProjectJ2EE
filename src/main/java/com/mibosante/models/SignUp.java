@@ -9,14 +9,14 @@ import java.sql.SQLException;
 
 public class SignUp {
 
-    public static boolean signup(String name, String username, String password) {
+    public static boolean signup(String name, String email, String password) {
         boolean result = false;
         try {
             Connection conn = DBConnection.getConnection();
-            String query = "INSERT INTO users (name, username, password) VALUES (?, ?, ?)";
+            String query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, name);
-            statement.setString(2, username);
+            statement.setString(2, email);
             statement.setString(3, password);
 
             int rowsInserted = statement.executeUpdate();

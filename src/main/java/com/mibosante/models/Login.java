@@ -7,13 +7,13 @@ import java.sql.*;
 
 public class Login {
 
-    public static boolean authenticate(String username, String password) {
+    public static boolean authenticate(String email, String password) {
         boolean result = false;
         try {
             Connection conn = DBConnection.getConnection();
-            String query = "SELECT * FROM login WHERE username = ? AND password = ?";
+            String query = "SELECT * FROM login WHERE email = ? AND password = ?";
             PreparedStatement statement = conn.prepareStatement(query);
-            statement.setString(1, username);
+            statement.setString(1, email);
             statement.setString(2, password);
 
             ResultSet resultSet = statement.executeQuery();
@@ -27,14 +27,14 @@ public class Login {
         return result;
     }
 
-    public static Integer create(String username, String password ){
-        String query1 = "INSERT INTO login(username, password) VALUES (?, ?);";
+    public static Integer create(String email, String password ){
+        String query1 = "INSERT INTO login(email, password) VALUES (?, ?);";
         String query2 = "SELECT MAX(login_id) FROM login;";
         Integer id = null;
         try {
             Connection connection = DBConnection.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query1);
-            preparedStatement.setString(1, username);
+            preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             preparedStatement.executeUpdate();
             preparedStatement.close();
