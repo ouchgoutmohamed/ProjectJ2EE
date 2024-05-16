@@ -21,13 +21,10 @@ public class ContactServlet extends HttpServlet {
         boolean insertResult = Contact.insertContact(name, email, subject, message);
 
         if (insertResult) {
-<<<<<<< HEAD
-            response.sendRedirect("contact.jsp"); // Redirect to success page if insertion is successful
-=======
             response.sendRedirect("success.jsp"); // Redirect to success page if insertion is successful
->>>>>>> 17605b7b7f7b0d4861aafda6263e0793e15876d7
         } else {
             response.sendRedirect("error.jsp"); // Redirect to error page if insertion fails
         }
     }
+
 }

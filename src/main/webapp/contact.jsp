@@ -32,7 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="DEsign/css/style.css" rel="stylesheet">
-=======
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -52,12 +52,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
->>>>>>> 17605b7b7f7b0d4861aafda6263e0793e15876d7
+
 </head>
 
 <body class="page-contact">
 
-<<<<<<< HEAD
+
 
 
 
@@ -202,7 +202,7 @@
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
->>>>>>> 17605b7b7f7b0d4861aafda6263e0793e15876d7
+
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -211,7 +211,7 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-<<<<<<< HEAD
+
           </div>
 
         </div>
@@ -236,7 +236,7 @@
 
     <!-- Template Main JS File -->
     <script src="DEsign/js/main.js"></script>
-=======
+
           </div><!-- End Contact Form -->
         </div>
       </div>
@@ -324,7 +324,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
->>>>>>> 17605b7b7f7b0d4861aafda6263e0793e15876d7
+
 
 </body>
 </html>

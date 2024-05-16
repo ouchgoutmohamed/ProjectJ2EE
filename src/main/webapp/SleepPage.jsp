@@ -17,23 +17,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="DEsign/img/favicon.png" rel="icon">
+  <link href="DEsign/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/aos/aos.css" rel="stylesheet">
+  <link href="DEsign/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="DEsign/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
-  <link href="../assets/css/Monstyle.css" rel="stylesheet">
+  <link href="DEsign/css/style.css" rel="stylesheet">
+  <link href="DEsign/css/Monstyle.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -54,7 +54,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="DEsign/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -124,27 +124,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr scope="row">
-               
-              <td class="pl-0">
-                <div class="d-flex align-items-center">
-                  <label class="custom-control ios-switch">
-                  <input type="checkbox" class="ios-switch-control-input" checked="">
-                  <span class="ios-switch-control-indicator"></span>
-                  </label>
 
-                  <a href="#">checked</a>
-                </div>
-              </td> 
-              <td>
-                Web Designer
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+63 983 0962 971</td>
-              <td>NY University</td>
-              <td><a href="#" class="more">Details</a></td>
-            
-            </tr>
 
             <tr>
               <td class="pl-0">
@@ -159,33 +139,14 @@
 
               </td>
               <td>
-                Graphic Designer
+                date
                 <small class="d-block">Far far away, behind the word mountains</small>
               </td>
-              <td>+02 020 3994 929</td>
-              <td>London College</td>
+              <td>bedtime</td>
+              <td>waketime</td>
               <td><a href="#" class="more">Details</a></td>
             </tr>
-            <tr>
-              <td class="pl-0">
-                <div class="d-flex align-items-center">
-                  <label class="custom-control ios-switch">
-                  <input type="checkbox" class="ios-switch-control-input">
-                  <span class="ios-switch-control-indicator"></span>
-                  </label>
 
-                  <a href="#">unchecked</a>
-                </div>
-                
-              </td>
-              <td>
-                Mobile Dev
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+01 352 1125 0192</td>
-              <td>Senior High</td>
-              <td><a href="#" class="more">Details</a></td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -198,62 +159,63 @@
                     <h5 class="modal-title" id="formModalLabel">INSERT  A NEW DATA</h5>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="sleep-servlet" method="post">
                         <div class="form-group">
                             <label for="date">Date</label>
-                            <input type="date" class="form-control" id="date">
+                            <input type="date" class="form-control" id="date" name="date">
                         </div>
                         <div class="form-group">
-                             <label for="time">Go to bed at</label>
-                            <select class="form-control" id="time">
-                                 <option value="">Choisissez une heure</option>
-                                <option value="12:00 AM">12:00 AM</option>
-                                <option value="12:30 AM">12:30 AM</option>
-                                <option value="01:00 AM">01:00 AM</option>
-                                <option value="01:30 AM">01:30 AM</option>
-                                <option value="02:00 AM">02:00 AM</option>
-                                <option value="02:30 AM">02:30 AM</option>
-                                <option value="03:00 AM">03:00 AM</option>
-                                <option value="03:30 AM">03:30 AM</option>
-                                <option value="04:00 AM">04:00 AM</option>
-                                <option value="04:30 AM">04:30 AM</option>
-                                <option value="05:00 AM">05:00 AM</option>
-                                <option value="05:30 AM">05:30 AM</option>
-                                <option value="06:00 AM">06:00 AM</option>
-                                <option value="06:30 AM">06:30 AM</option>
-                                <option value="07:00 AM">07:00 AM</option>
-                                <option value="07:30 AM">07:30 AM</option>
-                                <option value="08:00 AM">08:00 AM</option>
-                                <option value="08:30 AM">08:30 AM</option>
+                            <label for="bedTime">Go to bed at</label>
+                            <select class="form-control" id="bedTime" name="bedTime">
+                                <option value="">Choisissez une heure</option>
+                                <option value="00:00">12:00 AM</option>
+                                <option value="00:30">12:30 AM</option>
+                                <option value="01:00">01:00 AM</option>
+                                <option value="01:30">01:30 AM</option>
+                                <option value="02:00">02:00 AM</option>
+                                <option value="02:30">02:30 AM</option>
+                                <option value="03:00">03:00 AM</option>
+                                <option value="03:30">03:30 AM</option>
+                                <option value="04:00">04:00 AM</option>
+                                <option value="04:30">04:30 AM</option>
+                                <option value="05:00">05:00 AM</option>
+                                <option value="05:30">05:30 AM</option>
+                                <option value="06:00">06:00 AM</option>
+                                <option value="06:30">06:30 AM</option>
+                                <option value="07:00">07:00 AM</option>
+                                <option value="07:30">07:30 AM</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="08:30">08:30 AM</option>
                             </select>
                         </div>
-                             <div class="form-group">
-                             <label for="time">Wake up at</label>
-                            <select class="form-control" id="time">
-                                 <option value="">Choisissez une heure</option>
-                                <option value="12:00 AM">12:00 AM</option>
-                                <option value="12:30 AM">12:30 AM</option>
-                                <option value="01:00 AM">01:00 AM</option>
-                                <option value="01:30 AM">01:30 AM</option>
-                                <option value="02:00 AM">02:00 AM</option>
-                                <option value="02:30 AM">02:30 AM</option>
-                                <option value="03:00 AM">03:00 AM</option>
-                                <option value="03:30 AM">03:30 AM</option>
-                                <option value="04:00 AM">04:00 AM</option>
-                                <option value="04:30 AM">04:30 AM</option>
-                                <option value="05:00 AM">05:00 AM</option>
-                                <option value="05:30 AM">05:30 AM</option>
-                                <option value="06:00 AM">06:00 AM</option>
-                                <option value="06:30 AM">06:30 AM</option>
-                                <option value="07:00 AM">07:00 AM</option>
-                                <option value="07:30 AM">07:30 AM</option>
-                                <option value="08:00 AM">08:00 AM</option>
-                                <option value="08:30 AM">08:30 AM</option>
+                        <div class="form-group">
+                            <label for="wakeTime">Wake up at</label>
+                            <select class="form-control" id="wakeTime" name="wakeTime">
+                                <option value="">Choisissez une heure</option>
+                                <option value="00:00">12:00 AM</option>
+                                <option value="00:30">12:30 AM</option>
+                                <option value="01:00">01:00 AM</option>
+                                <option value="01:30">01:30 AM</option>
+                                <option value="02:00">02:00 AM</option>
+                                <option value="02:30">02:30 AM</option>
+                                <option value="03:00">03:00 AM</option>
+                                <option value="03:30">03:30 AM</option>
+                                <option value="04:00">04:00 AM</option>
+                                <option value="04:30">04:30 AM</option>
+                                <option value="05:00">05:00 AM</option>
+                                <option value="05:30">05:30 AM</option>
+                                <option value="06:00">06:00 AM</option>
+                                <option value="06:30">06:30 AM</option>
+                                <option value="07:00">07:00 AM</option>
+                                <option value="07:30">07:30 AM</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="08:30">08:30 AM</option>
                             </select>
                         </div>
 
                         <button type="submit" id="btnNV" class="btn btn-success">ADD</button>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -298,24 +260,24 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
  
   <!-- Vendor JS Files -->
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="DEsign/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="DEsign/vendor/aos/aos.js"></script>
+  <script src="DEsign/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="DEsign/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="DEsign/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="DEsign/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="DEsign/vendor/typed.js/typed.umd.js"></script>
+  <script src="DEsign/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="DEsign/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+  <script src="DEsign/js/main.js"></script>
 
    <!-- JS FILE OF TABLE -->
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
