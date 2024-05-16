@@ -4,7 +4,14 @@
     Author     : Meriam
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%><%@ page import="java.util.List" %>
+<%@ page import="com.mibosante.models.Sleep" %>
+<%@ page import="com.mibosante.models.SleepDAO" %>
+<%
+    SleepDAO sleepDAO = new SleepDAO();
+    List<Sleep> sleepList = sleepDAO.getAllSleep();
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,14 +115,7 @@
         <table class="table table-striped custom-table">
           <thead>
             <tr>
-                <!--
-              <th scope="col">
-                <label class="control control--checkbox">
-                  <input type="checkbox"  class="js-check-all"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
-               -->
+
               <th scope="col">Evaluation</th>
               <th scope="col">Date</th>
               <th scope="col">Go to bed at</th>
@@ -126,26 +126,32 @@
           <tbody>
 
 
-            <tr>
-              <td class="pl-0">
-                <div class="d-flex align-items-center">
-                  <label class="custom-control ios-switch">
-                  <input type="checkbox" class="ios-switch-control-input" checked="">
-                  <span class="ios-switch-control-indicator"></span>
-                  </label>
 
-                  <a href="#">checked</a>
-                </div>
 
-              </td>
-              <td>
-                date
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>bedtime</td>
-              <td>waketime</td>
-              <td><a href="#" class="more">Details</a></td>
-            </tr>
+          <!-- Your existing HTML structure -->
+
+                      <% for(Sleep sleep : sleepList) { %>
+                      <tr>
+                          <td class="pl-0">
+                              <div class="d-flex align-items-center">
+                                  <label class="custom-control ios-switch">
+                                      <input type="checkbox" class="ios-switch-control-input">
+                                      <span class="ios-switch-control-indicator"></span>
+                                  </label>
+                                  <a href="#">checked</a>
+                              </div>
+                          </td>
+                          <td>
+                              <%= sleep.getDate() %>
+                              <small class="d-block">Far far away, behind the word mountains</small>
+                          </td>
+                          <td><%= sleep.getBedTime() %></td>
+                          <td><%= sleep.getWakeTime() %></td>
+                          <td><a href="#" class="more">Details</a></td>
+                      </tr>
+                      <% } %>
+
+
 
           </tbody>
         </table>

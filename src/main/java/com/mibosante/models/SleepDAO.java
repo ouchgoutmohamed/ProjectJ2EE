@@ -1,8 +1,11 @@
 package com.mibosante.models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mibosante.database.DBConnection;
 
 public class SleepDAO {
@@ -26,4 +29,25 @@ public class SleepDAO {
             return false;
         }
     }
+    public List<Sleep> getAllSleep() {
+        List<Sleep> sleepList = new ArrayList<>();
+        try (Connection connection = DBConnection.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM sleep")) {
+
+            while (resultSet.next()) {
+                LocalDate date = resultSet.getDate("date").toLocalDate();
+                LocalTime bedTime = resultSet.getTime("bed_time").toLocalTime();
+                LocalTime wakeTime = resultSet.getTime("wake_time").toLocalTime();
+                Sleep sleep = new Sleep(date, bedTime, wakeTime);
+                // ... set other fields if necessary
+                sleepList.add(sleep);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return sleepList;
+    }
+
+
 }

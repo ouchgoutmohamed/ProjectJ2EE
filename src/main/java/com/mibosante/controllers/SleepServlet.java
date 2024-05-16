@@ -22,7 +22,7 @@ public class SleepServlet extends HttpServlet {
         Sleep sleep = new Sleep(date, bedTime, wakeTime);
 
         if (SleepDAO.insertSleep(sleep)) {
-            response.sendRedirect("success.jsp"); // Redirect to success page if insertion is successful
+            response.sendRedirect("SleepPage.jsp"); // Redirect to success page if insertion is successful
         } else {
             response.sendRedirect("error.jsp"); // Redirect to error page if insertion fails
         }

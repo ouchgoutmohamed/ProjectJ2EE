@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Sleep {
+    private int id;
     private LocalDate date;
     private LocalTime bedTime;
     private LocalTime wakeTime;
@@ -13,6 +14,7 @@ public class Sleep {
         this.bedTime = bedTime;
         this.wakeTime = wakeTime;
     }
+
 
     public LocalDate getDate() {
         return date;
@@ -36,6 +38,10 @@ public class Sleep {
 
     public void setWakeTime(LocalTime wakeTime) {
         this.wakeTime = wakeTime;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 // getters and setters
 }
