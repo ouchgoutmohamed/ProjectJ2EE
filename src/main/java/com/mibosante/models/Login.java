@@ -2,22 +2,31 @@ package com.mibosante.models;
 
 
 import com.mibosante.database.DBConnection;
-
 import java.sql.*;
 
 public class Login {
-
+    public static String currentUserName;
+    public static String currentUserEmail;
+    public static int currentUserId;
     public static boolean authenticate(String email, String password) {
         boolean result = false;
         try {
             Connection conn = DBConnection.getConnection();
-            String query = "SELECT * FROM login WHERE email = ? AND password = ?";
+            String query = "SELECT * FROM users WHERE email = ? AND password = ?";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, email);
             statement.setString(2, password);
 
             ResultSet resultSet = statement.executeQuery();
-            result = resultSet.next(); // If result set has next, credentials are valid
+            if (resultSet.next()) {
+                result = true; // The user is successfully authenticated
+                String userName = resultSet.getString("name"); // Store the user's name
+                email = resultSet.getString("email"); // Store the user's email
+                int userId = resultSet.getInt("id"); // Store the user's id
+                currentUserName = userName; // Set the current user's name
+                currentUserEmail = email; // Set the current user's email
+                currentUserId = userId; // Set the current user's id
+            }
             resultSet.close();
             statement.close();
             conn.close();
@@ -26,6 +35,7 @@ public class Login {
         }
         return result;
     }
+
 
     public static Integer create(String email, String password ){
         String query1 = "INSERT INTO login(email, password) VALUES (?, ?);";

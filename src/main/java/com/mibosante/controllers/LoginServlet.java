@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         {
             HttpSession session = req.getSession();
             session.setAttribute("email", email);
-            res.sendRedirect("dashboard.jsp");
+            res.sendRedirect("Home.jsp");
         } else {
             res.sendRedirect("login.jsp");
         }
