@@ -1,7 +1,7 @@
 package com.mibosante.controllers;
 
 import com.mibosante.models.Sleep;
-import com.mibosante.models.SleepDAO;
+import com.mibosante.DAO.SleepDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

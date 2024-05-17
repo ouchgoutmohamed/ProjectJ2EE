@@ -4,7 +4,7 @@
     Author     : univers
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.mibosante.models.LoginDAO" %>
+<%@ page import="com.mibosante.DAO.LoginDAO" %>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,6 +1,7 @@
-package com.mibosante.models;
+package com.mibosante.DAO;
 
 import com.mibosante.database.DBConnection;
+import com.mibosante.models.Activity;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

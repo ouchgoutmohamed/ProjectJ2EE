@@ -6,8 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%><%@ page import="java.util.List" %>
 <%@ page import="com.mibosante.models.Sleep" %>
-<%@ page import="com.mibosante.models.SleepDAO" %>
-<%@ page import="com.mibosante.models.LoginDAO" %>
+<%@ page import="com.mibosante.DAO.SleepDAO" %>
+<%@ page import="com.mibosante.DAO.LoginDAO" %>
 <%
     SleepDAO sleepDAO = new SleepDAO();
     List<Sleep> sleepList = sleepDAO.getAllSleep();

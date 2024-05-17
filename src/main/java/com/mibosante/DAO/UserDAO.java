@@ -1,5 +1,5 @@
 
-package com.mibosante.models;
+package com.mibosante.DAO;
 
 import com.mibosante.database.DBConnection;
 

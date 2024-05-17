@@ -1,13 +1,12 @@
 package com.mibosante.controllers;
 
-import com.mibosante.models.SignUpDAO;
+import com.mibosante.DAO.SignUpDAO;
 import com.mibosante.utils.Encryptor;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 @WebServlet(name = "SignUpServlet", urlPatterns = "/signup-servlet")
 public class SignUpServlet extends HttpServlet {

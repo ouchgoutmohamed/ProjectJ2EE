@@ -1,6 +1,6 @@
 package com.mibosante.controllers;
 
-import com.mibosante.models.ActivityDAO;
+import com.mibosante.DAO.ActivityDAO;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

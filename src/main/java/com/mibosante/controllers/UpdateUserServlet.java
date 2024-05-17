@@ -1,6 +1,6 @@
 package com.mibosante.controllers;
 
-import com.mibosante.models.SignUpDAO;
+import com.mibosante.DAO.SignUpDAO;
 import com.mibosante.utils.Encryptor;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,8 +23,7 @@ public class UpdateUserServlet extends HttpServlet {
         if (name == null || name.isEmpty() ||
                 email == null || email.isEmpty() ||
                 password == null || password.isEmpty()) {
-            // Handle missing parameters (e.g., redirect to an error page with a message)
-            res.sendRedirect("update-error.jsp?message=Missing parameters");
+            res.sendRedirect("Profil.jsp");
             return; // Stop processing the request if parameters are missing
         }
 
@@ -45,8 +44,7 @@ public class UpdateUserServlet extends HttpServlet {
             res.sendRedirect("profile.jsp");
         } else {
             // Handle update failure (e.g., display error message on the same page)
-            req.setAttribute("errorMessage", "Update failed. Please try again.");
-            req.getRequestDispatcher("update-form.jsp").forward(req, res);
+            res.sendRedirect("profile.jsp");
         }
     }
 

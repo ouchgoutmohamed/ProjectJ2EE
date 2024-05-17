@@ -1,6 +1,7 @@
 package com.mibosante.models;
 
 
+import com.mibosante.DAO.LoginDAO;
 
 public class User {
     private String name;

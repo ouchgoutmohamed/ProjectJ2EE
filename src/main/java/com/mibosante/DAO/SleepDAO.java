@@ -1,4 +1,4 @@
-package com.mibosante.models;
+package com.mibosante.DAO;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mibosante.database.DBConnection;
+import com.mibosante.models.Sleep;
 
 public class SleepDAO {
     public static boolean insertSleep(Sleep sleep) {

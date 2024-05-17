@@ -1,7 +1,7 @@
 package com.mibosante.controllers;
 
 import com.mibosante.models.Activity;
-import com.mibosante.models.ActivityDAO;
+import com.mibosante.DAO.ActivityDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

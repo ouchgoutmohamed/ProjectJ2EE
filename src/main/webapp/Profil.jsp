@@ -1,4 +1,4 @@
-<%@ page import="com.mibosante.models.LoginDAO" %><%--
+<%@ page import="com.mibosante.DAO.LoginDAO" %><%--
     Document   : Profil
     Created on : 15 mai 2024, 11:08:16
     Author     : univers

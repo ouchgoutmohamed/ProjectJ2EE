@@ -5,11 +5,11 @@
 --%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.mibosante.models.Activity" %>
-<%@ page import="com.mibosante.models.ActivityDAO" %>
+<%@ page import="com.mibosante.DAO.ActivityDAO" %>
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="com.mibosante.models.LoginDAO" %>
+<%@ page import="com.mibosante.DAO.LoginDAO" %>
 <!DOCTYPE html>
 <html lang="en">
 

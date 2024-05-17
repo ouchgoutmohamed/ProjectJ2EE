@@ -1,6 +1,6 @@
 package com.mibosante.controllers;
 
-import com.mibosante.models.*;
+import com.mibosante.DAO.LoginDAO;
 import com.mibosante.utils.Encryptor;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
