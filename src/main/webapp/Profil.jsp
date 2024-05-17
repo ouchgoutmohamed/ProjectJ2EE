@@ -103,11 +103,10 @@
 
           <div class="col-lg-8" id="infos">
               <h2>My Informations</h2>
-              <br><form action="signup-servlet" method="post" enctype="multipart/form-data">
-              <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-                  <input type="file" class="form-control" name="profileImage" aria-label="Profile Image" aria-describedby="basic-addon1">
-              </div>
+              <br><form action="update-user-servlet" method="post" enctype="multipart/form-data">
+              <!-- Hidden field to indicate update action -->
+              <input type="hidden" name="update" value="true">
+
               <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
                   <input type="text" class="form-control" name="name" placeholder="New Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -123,7 +122,8 @@
               <div id="Btn_Prfl2">
                   <button type="submit" class="btn btn-info">Save</button>
               </div>
-          </form> </div>
+          </form>
+          </div>
           <div class="col-lg-4">
             <div class="portfolio-info">
              <h3> <i class="bx bx-book-content"></i> Account Details</h3>

@@ -1,28 +1,25 @@
 package com.mibosante.models;
 
+
 import com.mibosante.database.DBConnection;
 
-import java.io.InputStream;
+import javax.swing.*;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class SignUpDAO {
 
-    public static boolean signup(String name, String email, String password, InputStream profileImage) {
+    public static boolean signup(String name, String email, String password) {
         boolean result = false;
         try {
             Connection conn = DBConnection.getConnection();
-            String query = "INSERT INTO users (name, email, password, profile_image) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, name);
             statement.setString(2, email);
             statement.setString(3, password);
-            if (profileImage != null) {
-                statement.setBlob(4, profileImage);
-            } else {
-                statement.setNull(4, java.sql.Types.BLOB);
-            }
 
             int rowsInserted = statement.executeUpdate();
             result = (rowsInserted > 0); // If one or more rows were inserted, signup was successful
@@ -33,33 +30,31 @@ public class SignUpDAO {
         }
         return result;
     }
-
-    // existing code...
-
-    public static boolean updateUserProfile(String name, String email, String password, InputStream profileImage) {
-        boolean result = false;
+    public static boolean updateUser(String name, String email, String password) {
+        boolean isUpdated = false;
         try {
-            Connection conn = DBConnection.getConnection();
-            String query = "UPDATE users SET name = ?, email = ?, password = ?, profile_image = ? WHERE email = ?";
-            PreparedStatement statement = conn.prepareStatement(query);
+            Connection connection = DBConnection.getConnection();
+            String sql = "UPDATE users SET name = ?, email = ?, password = ? WHERE name = ?";
+
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, name);
             statement.setString(2, email);
             statement.setString(3, password);
-            if (profileImage != null) {
-                statement.setBlob(4, profileImage);
-            } else {
-                // If no image is provided, keep the existing one
-                statement.setNull(4, java.sql.Types.BLOB);
-            }
-            statement.setString(5, email);
+            statement.setString(4, name);
 
             int rowsUpdated = statement.executeUpdate();
-            result = (rowsUpdated > 0); // If one or more rows were updated, the update was successful
+            if (rowsUpdated > 0) {
+                System.out.println("User's email and password were updated successfully!");
+                JOptionPane.showMessageDialog(null, "User's email and password were updated successfully!", "Update Successful", JOptionPane.INFORMATION_MESSAGE);
+                isUpdated = true;
+            }
+
             statement.close();
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            connection.close();
+        } catch (SQLException ex) {
+            System.out.println("Error while updating the user's email and password: " + ex.getMessage());
         }
-        return result;
+        return isUpdated;
     }
+
 }

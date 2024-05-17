@@ -12,11 +12,7 @@ import java.io.InputStream;
 @WebServlet(name = "SignUpServlet", urlPatterns = "/signup-servlet")
 public class SignUpServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        Part filePart = req.getPart("profileImage");
-        InputStream profileImage = null;
-        if (filePart != null) {
-            profileImage = filePart.getInputStream();
-        }
+
         String name = req.getParameter("name").trim();
         String email = req.getParameter("email").trim();
         String password = Encryptor.encryptPassword(req.getParameter("password").trim());

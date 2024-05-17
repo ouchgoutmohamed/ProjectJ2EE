@@ -3,9 +3,13 @@
     Created on : 16 mai 2024, 15:52:37
     Author     : univers
 --%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.mibosante.models.Activity" %>
+<%@ page import="com.mibosante.models.ActivityDAO" %>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="com.mibosante.models.Login" %>
+<%@ page import="com.mibosante.models.LoginDAO" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +79,7 @@
 
       <div class="profile">
         <img src="DEsign/img/user.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a ><%= Login.currentUserName %></a></h1>
+        <h1 class="text-light"><a ><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -121,12 +125,12 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Physical Activity Log</h2>
-                    <form method="POST">
+                    <form method="POST" action="activity-servlet">
                         <div class="row row-space">
                             <div class="input-group">
                                 
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="activityType">
                                     <option disabled="disabled" selected="selected">Type of activity</option>
                                     <option>Running</option>
                                     <option>Walking</option>
@@ -140,14 +144,16 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-6">
-                                <div class="input-group">
-                                    <label class="label">Date</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="date">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
+                                <label class="label" style="">Date</label><div class="input-group">
+
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" type="date" name="date">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
+                            </div>
+
+
                             
                         </div>
                         <div class="row row-space">
@@ -185,15 +191,25 @@
 					      </tr>
 					    </thead>
 					    <tbody>
-					      <tr>
-					        
-					        <td class="border-bottom-0">1 Year</td>
-					        <td class="border-bottom-0">$45.00</td>
-					        <td class="border-bottom-0">$5.00</td>
-					        
-					        <td class="border-bottom-0"><button class="btn btn-primary" type="submit">delete</button></td>
-					      </tr>
-					    </tbody>
+                       <% List<Activity> activities = ActivityDAO.getAllActivities(); %>
+
+
+                            <% for(Activity activity : activities) { %>
+                            <tr>
+                                <td class="border-bottom-0"><%= activity.getActivityType() %></td>
+                                <td class="border-bottom-0"><%= activity.getDate() %></td>
+                                <td class="border-bottom-0"><%= activity.getDescription() %></td>
+                                <td class="border-bottom-0">
+                                    <form method="GET" action="delete-activity">
+                                        <input type="hidden" name="id" value="<%= activity.getId() %>" />
+                                        <button class="btn btn-primary" type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% } %>
+
+
+                        </tbody>
 					  </table>
 					</div>
 				</div>
