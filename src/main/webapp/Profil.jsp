@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
+  <title>PROFIL</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -53,7 +53,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="DEsign/img/user.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html"><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -68,10 +68,10 @@
         <ul>
           <li><a href="./Home.jsp" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="./SleepPage.jsp" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sleep</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Physical Activity</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Hydratation</span></a></li>
+          <li><a href="./Physical.jsp" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Physical Activity</span></a></li>
           <li><a href="./Profil.jsp" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Profil</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>XML Configuration</span></a></li>
+          <li><a href="./XmlConfig.jsp" class="nav-link scrollto"><i class="bx bx-server"></i> <span>XML Configuration</span></a></li>
+          <li><a href="./indexHome.jsp" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -86,7 +86,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>My Profil</h2>
           <ol>
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="Home.jsp">Home</a></li>
             <li>My Profil</li>
           </ol>
         </div>
@@ -128,10 +128,10 @@
             <div class="portfolio-info">
              <h3> <i class="bx bx-book-content"></i> Account Details</h3>
               <ul>
-                <li><strong>N° User</strong>: ASU Company</li>
+                <li><strong>N° User</strong>: 05</li>
                 <li><strong>Category</strong>: Health App</li>
-                <li><strong>Created at</strong>: 01 March, 2020</li>
-                <li><strong>Last Update</strong>: March, 2020</li>
+                <li><strong>Created at</strong>: 11 Mai, 2024</li>
+                <li><strong>Last Update</strong>: Mai, 2024</li>
               </ul>
             </div>
               <!--
@@ -154,14 +154,14 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
+        &copy; Copyright <strong><span>MiboSanté</span></strong>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        DEsign/ed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        DEsign/ed by <a href="https://bootstrapmade.com/">MiboSanté</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
