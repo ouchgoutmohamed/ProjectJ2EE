@@ -75,12 +75,12 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="./Home.jsp" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="./SleepPage.jsp" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sleep</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Physical Activity</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Hydratation</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Profil</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>XML Configuration</span></a></li>
+          <li><a href="./Physical.jsp" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Physical Activity</span></a></li>
+          <li><a href="./Profil.jsp" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Profil</span></a></li>
+          <li><a href="./XmlConfig.jsp" class="nav-link scrollto"><i class="bx bx-server"></i> <span>XML Configuration</span></a></li>
+          <li><a href="./indexHome.jsp" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
