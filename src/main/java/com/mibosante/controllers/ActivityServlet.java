@@ -32,15 +32,7 @@ public class ActivityServlet extends HttpServlet {
         }
     }
 
-        protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-            String action = req.getServletPath();
 
-            if (action.equals("/delete-activity")) {
-                int id = Integer.parseInt(req.getParameter("id"));
-                ActivityDAO.deleteActivity(id); // Implement this method in ActivityDAO
-                res.sendRedirect("activities.jsp"); // Redirect to the JSP page that lists activities
-            }
-        }
     }
 
 
