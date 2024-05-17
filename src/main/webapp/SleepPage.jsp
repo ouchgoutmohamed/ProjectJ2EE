@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%><%@ page import="java.util.List" %>
 <%@ page import="com.mibosante.models.Sleep" %>
 <%@ page import="com.mibosante.models.SleepDAO" %>
+<%@ page import="com.mibosante.models.LoginDAO" %>
 <%
     SleepDAO sleepDAO = new SleepDAO();
     List<Sleep> sleepList = sleepDAO.getAllSleep();
@@ -62,7 +63,7 @@
 
       <div class="profile">
         <img src="DEsign/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <h1 class="text-light"><a href="index.html"><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

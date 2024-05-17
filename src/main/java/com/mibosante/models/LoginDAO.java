@@ -4,7 +4,7 @@ package com.mibosante.models;
 import com.mibosante.database.DBConnection;
 import java.sql.*;
 
-public class Login {
+public class LoginDAO {
     public static String currentUserName;
     public static String currentUserEmail;
     public static int currentUserId;

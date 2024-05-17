@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email").trim();
         String password = Encryptor.encryptPassword(req.getParameter("password").trim());
 
-        if(Login.authenticate(email, password))
+        if(LoginDAO.authenticate(email, password))
         {
             HttpSession session = req.getSession();
             session.setAttribute("email", email);

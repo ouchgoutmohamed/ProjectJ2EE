@@ -7,6 +7,7 @@ public class User {
     private String email;
     private String password;
 
+
     // Getters
     public String getName() {
         return name;
@@ -22,11 +23,11 @@ public class User {
 
     // Setters
     public void setName(String name) {
-        this.name = Login.currentUserName;
+        this.name = LoginDAO.currentUserName;
     }
 
     public void setEmail(String email) {
-        this.email = Login.currentUserEmail;
+        this.email = LoginDAO.currentUserEmail;
     }
 
     public void setPassword(String password) {

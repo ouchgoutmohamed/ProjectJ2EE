@@ -1,4 +1,4 @@
-<%-- 
+<%@ page import="com.mibosante.models.LoginDAO" %><%--
     Document   : Profil
     Created on : 15 mai 2024, 11:08:16
     Author     : univers
@@ -17,22 +17,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="DEsign/img/favicon.png" rel="icon">
+  <link href="DEsign/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/aos/aos.css" rel="stylesheet">
+  <link href="DEsign/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="DEsign/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="DEsign/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="DEsign/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -53,8 +53,8 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Guest?</a></h1>
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html"><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -100,52 +100,30 @@
 
         <div class="row gy-4">
 
-          <!--<div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-          -->
           <div class="col-lg-8" id="infos">
               <h2>My Informations</h2>
-              <br> 
+              <br><form action="signup-servlet" method="post" enctype="multipart/form-data">
               <div class="input-group mb-3">
-           <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-           <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
+                  <input type="file" class="form-control" name="profileImage" aria-label="Profile Image" aria-describedby="basic-addon1">
               </div>
-               <div class="input-group mb-3">
-           <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-           <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-               </div>
-                <div class="input-group mb-3">
-           <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-           <input type="text" class="form-control" placeholder="Password"  aria-label="Username" aria-describedby="basic-addon1">
-               </div>
-               <div class="input-group mb-3">
-           <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-           <input type="text" class="form-control" placeholder="Size"  aria-label="Username" aria-describedby="basic-addon1">
-               </div>
-                <div class="input-group mb-3">
-           <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
-           <input type="text" class="form-control" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
-               </div>
-            <div id="Btn_Prfl2"> <a type="button" class="btn btn-info" href="./Profil.jsp">Register  </a></div>
-          </div>
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>
+                  <input type="text" class="form-control" name="name" placeholder="New Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bx bx-envelope"></i></span>
+                  <input type="email" class="form-control" name="email" placeholder="New Email" aria-label="Email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bx bx-lock"></i></span>
+                  <input type="password" class="form-control" name="password" placeholder="New Password" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+              <div id="Btn_Prfl2">
+                  <button type="submit" class="btn btn-info">Save</button>
+              </div>
+          </form> </div>
           <div class="col-lg-4">
             <div class="portfolio-info">
              <h3> <i class="bx bx-book-content"></i> Account Details</h3>
@@ -183,7 +161,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        DEsign/ed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -191,18 +169,18 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="DEsign/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="DEsign/vendor/aos/aos.js"></script>
+  <script src="DEsign/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="DEsign/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="DEsign/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="DEsign/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="DEsign/vendor/typed.js/typed.umd.js"></script>
+  <script src="DEsign/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="DEsign/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+  <script src="DEsign/js/main.js"></script>
 
 </body>
 

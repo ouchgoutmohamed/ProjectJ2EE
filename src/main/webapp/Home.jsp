@@ -4,7 +4,8 @@
     Author     : univers
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.mibosante.models.Login" %>
+<%@ page import="com.mibosante.models.LoginDAO" %>
+<%@ page import="com.mibosante.models.UserDAO" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,7 @@
 
       <div class="profile">
         <img src="DEsign/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a ><%= Login.currentUserName %></a></h1>
+        <h1 class="text-light"><a ><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -80,7 +81,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-     <h1> Hello, <%= Login.currentUserName %></h1>
+     <h1> Hello, <%= LoginDAO.currentUserName %></h1>
 
       <p>We're here <span class="typed" data-typed-items="to be with you,to help you, to support you"></span></p>
     </div>
@@ -335,14 +336,14 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="DEsign/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="DEsign/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+    <div class="portfolio-wrap">
+        <img src="<%= UserDAO.getProfileImage(LoginDAO.currentUserEmail) %>" alt="" class="img-fluid rounded-circle">
+        <div class="portfolio-links">
+            <a href="DEsign/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+    </div>
+</div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
