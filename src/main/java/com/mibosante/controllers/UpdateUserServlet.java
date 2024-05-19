@@ -23,23 +23,19 @@ public class UpdateUserServlet extends HttpServlet {
         if (name == null || name.isEmpty() ||
                 email == null || email.isEmpty() ||
                 password == null || password.isEmpty()) {
-            res.sendRedirect("Profil.jsp");
+            res.sendRedirect("erreurNULLparmetrs.jsp");
             return; // Stop processing the request if parameters are missing
         }
 
-        // 2. Trim ONLY if Not Null:
+
         name = name.trim(); // Safe to trim now
         email = email.trim();
         password = password.trim();
 
-        // 3. Hash Password (Security is crucial!):
-        // ALWAYS hash passwords before storing them in the database!
-        password = Encryptor.encryptPassword(req.getParameter("password").trim()); // Example using BCrypt library
+         password = Encryptor.encryptPassword(req.getParameter("password").trim()); // Example using BCrypt library
 
-        // 4. Update User:
         boolean updateResult = SignUpDAO.updateUser(name, email, password);
 
-        // 5. Redirection Based on Result:
         if (updateResult) {
             res.sendRedirect("profile.jsp");
         } else {

@@ -53,7 +53,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="DEsign/img/user.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="DEsign/img/user.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html"><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -105,7 +105,7 @@
               <h2>My Informations</h2>
               <br><form action="update-user-servlet" method="post" enctype="multipart/form-data">
               <!-- Hidden field to indicate update action -->
-              <input type="hidden" name="update" value="true">
+
 
               <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bx bx-user"></i></span>

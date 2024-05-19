@@ -78,7 +78,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="DEsign/img/user.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="DEsign/img/user.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a ><%= LoginDAO.currentUserName %></a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -190,27 +190,30 @@
 					        <th style="color: #0069d9">Action</th>
 					      </tr>
 					    </thead>
-					    <tbody>
-                       <% List<Activity> activities = ActivityDAO.getAllActivities(); %>
-
-
+                            <tbody>
+                            <% List<Activity> activities = ActivityDAO.getAllActivities(); %>
                             <% for(Activity activity : activities) { %>
                             <tr>
                                 <td class="border-bottom-0"><%= activity.getActivityType() %></td>
                                 <td class="border-bottom-0"><%= activity.getDate() %></td>
                                 <td class="border-bottom-0"><%= activity.getDescription() %></td>
                                 <td class="border-bottom-0">
-                                    <form method="GET" action="delete-activity">
+                                    <!-- Delete form -->
+                                    <form method="GET" action="delete-activity" style="display:inline;">
                                         <input type="hidden" name="id" value="<%= activity.getId() %>" />
-                                        <button class="btn btn-primary" type="submit">Delete</button>
+                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                    </form>
+                                    <!-- Edit form -->
+                                    <form method="GET" action="edit-activity" style="display:inline;">
+                                        <input type="hidden" name="id" value="<%= activity.getId() %>" />
+                                        <button class="btn btn-primary" type="submit">Edit</button>
                                     </form>
                                 </td>
                             </tr>
                             <% } %>
+                            </tbody>
 
-
-                        </tbody>
-					  </table>
+                        </table>
 					</div>
 				</div>
 			</div>
