@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Activities>
+    <activity>
+        <id>10</id>
+        <activity_type>Running</activity_type>
+        <date>2024-05-01</date>
+        <description>a description </description>
+    </activity>
+        <activity>
+        <id>11</id>
+        <activity_type>Swimming</activity_type>
+        <date>2024-05-01</date>
+        <description>an other description</description>
+    </activity>
+        <activity>
+        <id>12</id>
+        <activity_type>Yoga</activity_type>
+        <date>2024-05-01</date>
+        <desription>also an other description </desription>
+    </activity>
+</Activities>
+

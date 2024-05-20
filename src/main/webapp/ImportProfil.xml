@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profil>
+  <User>
+        <first_name>Mohamed</first_name>
+        <last_name>Benjelloun</last_name>
+        <date_of_birth>1982-03-21</date_of_birth>
+        <gender>Male</gender>
+        <weight>80</weight>
+        <size_in_cm>175</size_in_cm>
+        <id>50</id>
+        <user_id>50</user_id>
+    </User>
+    <User>
+        <first_name>Fatima</first_name>
+        <last_name>El Amrani</last_name>
+        <date_of_birth>1995-07-14</date_of_birth>
+        <gender>Female</gender>
+        <weight>65</weight>
+        <size_in_cm>162</size_in_cm>
+        <id>51</id>
+        <user_id>51</user_id>
+    </User>
+    <User>
+        <first_name>Youssef</first_name>
+        <last_name>Haddadi</last_name>
+        <date_of_birth>1989-11-05</date_of_birth>
+        <gender>Male</gender>
+        <weight>90</weight>
+        <size_in_cm>185</size_in_cm>
+        <id>52</id>
+        <user_id>52</user_id>
+    </User>
+    <User>
+        <first_name>Rachida</first_name>
+        <last_name>Maazouzi</last_name>
+        <date_of_birth>2000-02-28</date_of_birth>
+        <gender>Female</gender>
+        <weight>70</weight>
+        <size_in_cm>170</size_in_cm>
+        <id>53</id>
+        <user_id>53</user_id>
+    </User>
+        
+</Profil>
+

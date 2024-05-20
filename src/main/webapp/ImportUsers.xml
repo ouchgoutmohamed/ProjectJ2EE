@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<users>
+    <entry>
+        <id>15</id>
+        <nom>Khadija</nom>
+        <email>khadija@example.com</email>
+        <mot_de_passe>KhadijaA123</mot_de_passe>
+    </entry>
+    <entry>
+        <id>16</id>
+        <nom>Yassine</nom>
+        <email>yassine@example.com</email>
+        <mot_de_passe>YassineB456</mot_de_passe>
+    </entry>
+    <entry>
+        <id>17</id>
+        <nom>Nadia</nom>
+        <email>nadia@example.com</email>
+        <mot_de_passe>NadiaC789</mot_de_passe>
+    </entry>
+    <entry>
+        <id>18</id>
+        <nom>Hicham</nom>
+        <email>hicham@example.com</email>
+        <mot_de_passe>HichamD012</mot_de_passe>
+    </entry>
+    <entry>
+        <id>19</id>
+        <nom>Latifa</nom>
+        <email>latifa@example.com</email>
+        <mot_de_passe>LatifaE345</mot_de_passe>
+    </entry>
+</users>
+
